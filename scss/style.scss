@@ -1,0 +1,178 @@
+@use "sass:math";
+
+@import "./mixins";
+
+
+// ========== ШРИФТЫ ==========
+@include font('SF UI Display', normal, 400, '../fonts/sfui_display_regular.woff2');
+@include font('SF UI Display', normal, 700, '../fonts/sfui_display_bold.woff2');
+@include font('Montserrat', normal, 400, '../fonts/Montserrat-Regular.woff2');
+@include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff2');
+// @include font('Montserrat', normal, 600, '../fonts/Montserrat-SemiBold.woff2');
+@include font('Montserrat', normal, 700, '../fonts/Montserrat-Bold.woff2');
+
+// ========== КОНЕЦ ШРИФТЫ ==========
+
+
+// ========== ПЕРЕМЕННЫЕ ==========
+
+// Цвета
+$text-primary: #1c1c1c;
+$text-second: create-rgba($text-primary, .4);
+$text-label: #BDBDBD;
+$text-gray: #87868A;
+$accent: #CA2323;
+$accent-active: brig-color($accent, .9);
+$light: #fff;
+$dark: #000;
+$main-gradient: linear-gradient(180deg, #2B2A30 0%, #0D0E11 100%);
+
+// Задний фон разделов
+$frame-light: #EBEBEB;
+$frame-dark: #0D0F11;
+
+// Обводка
+$border-line: #cecece;
+
+// Радиусы
+$radius-s: 8px;
+$radius-l: 32px;
+$radius-round: 99px;
+
+// Текстовые поля
+$input-placeholder: $text-second;
+
+// Уведомления
+$error: #EB5757;
+
+// Значения отзывчивости
+$min-width: 320px;
+$max-width: 1920px;
+$max-width-container: 1216;
+$container-padding: 48;
+$container-width: $max-width-container + $container-padding + px;
+
+// Разрешения экранов
+$laptop-l: 1500px;
+$laptop: 1100px;
+$tablet: 800px;
+$mobile-l: 450px;
+$mobile-m: 390px;
+$mobile-s: 330px;
+$hide-menu: 900px;
+
+// Прочее
+$ff-main: 'Montserrat', sans-serif;
+$ff-second: 'SF UI Display', sans-serif;
+$tr: .3s;
+
+// ========== КОНЕЦ ПЕРЕМЕННЫЕ ==========
+
+
+// ========== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ==========
+
+:root {
+	--container-padding: #{math.div($container-padding, 2) + 'px'};
+	--container-width: #{$container-width};
+}
+
+// ========== КОНЕЦ ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ==========
+
+
+
+
+// Сброс CSS
+@import "./reset";
+
+html {
+    min-width: $min-width;
+	max-height: 100vh;
+
+	&.is-lock {
+
+		& body {
+			overflow: hidden;
+			touch-action: none;
+		}
+	}
+}
+
+body {
+	font-family: $ff-main;
+	font-size: 14px;
+	font-weight: 400;
+	color: $text-primary;
+	line-height: 1.2;
+	background: $frame-light;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    & > .content {
+        flex: 1 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+// Контейнер
+[class*="__container"] {
+    @if ($max-width-container > 0) {
+        max-width: $max-width-container + px;
+        box-sizing: content-box;
+        margin: 0 auto;
+    }
+    @if ($container-padding > 0) {
+        padding: 0 var(--container-padding);
+    }
+
+	@media (max-width: $tablet) {
+		--container-padding: 30px;
+	}
+
+    @media (max-width: $mobile-l) {
+		--container-padding: 20px;
+    }
+
+    @media (max-width: $mobile-m) {
+		--container-padding: 16px;
+    }
+}
+
+
+
+
+// ========== БИБЛИОТЕКИ ==========
+
+// @import "./libs/swiper";
+// @import "./libs/zoominimg";
+
+// ========== КОНЕЦ БИБЛИОТЕКИ ==========
+
+
+
+// ========== ПОДКЛЮЧЕНИЕ ФАЙЛОВ ==========
+
+// Базовые стили, шаблоны, заготовки
+@import "./base";
+
+
+// Общие стили проекта
+@import "./common";
+
+
+// Секции
+@import "./sections/header";
+@import "./sections/main";
+@import "./sections/academy";
+@import "./sections/advant";
+@import "./sections/learn";
+@import "./sections/applic";
+@import "./sections/reviews";
+@import "./sections/footer";

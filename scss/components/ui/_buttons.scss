@@ -1,0 +1,155 @@
+// Основной шаблон кнопки
+.btn {
+	width: 340px;
+    height: 89px;
+    // display: inline-flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+	line-height: 1.2;
+	text-transform: uppercase;
+	// padding: 0 32px;
+    white-space: nowrap;
+    user-select: none;
+    transition: $tr;
+
+	&.is-light {
+		border: 2px solid #fff;
+		color: $light;
+
+		@media (any-hover: hover) {
+
+			&:hover {
+				background: $light;
+				color: $text-primary;
+			}
+		}
+	}
+
+	&.is-accent {
+		border: 2px solid $accent;
+		color: $accent;
+		font-weight: 500;
+
+		@media (any-hover: hover) {
+
+			&:hover {
+				background: $accent;
+				color: $light;
+			}
+		}
+	}
+
+	@media (max-width: $tablet) {
+		height: 50px;
+		padding: 0 24px;
+	}
+
+	@media (max-width: $mobile-l) {
+		height: 44px;
+		width: 100%;
+		padding: 0 20px;
+		font-size: 15px;
+	}
+}
+
+// button.is-light,
+// a.is-light {
+
+// 	&:active {
+// 		background: $accent;
+// 		color: $light;
+
+// 		& svg {
+// 			fill: $light;
+// 		}
+// 	}
+
+// 	@media (any-hover: hover) {
+
+// 		&:hover {
+// 			background: $accent;
+// 			color: $light;
+
+// 			& svg {
+// 				fill: $light;
+// 			}
+// 		}
+
+// 		&:active {
+// 			background: $accent-active;
+// 		}
+// 	}
+// }
+
+// button.is-accent,
+// a.is-accent {
+
+// 	&:active {
+// 		background: $light;
+// 		color: $text-primary;
+
+// 		& svg {
+// 			fill: $text-primary;
+// 		}
+// 	}
+
+// 	@media (any-hover: hover) {
+
+// 		&:hover {
+// 			background: $light;
+// 			color: $text-primary;
+
+// 			& svg {
+// 				fill: $text-primary;
+// 			}
+// 		}
+
+// 		&:active {
+// 			background: $accent;
+// 			color: $light;
+
+// 			& svg {
+// 				fill: $light;
+// 			}
+// 		}
+// 	}
+// }
+
+@mixin link {
+	--color: #{$text-primary};
+
+	color: var(--color);
+	transition: $tr;
+
+	&:active {
+		--color: #{$accent};
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			--color: #{$accent};
+		}
+
+		&:active {
+			--color: #{$accent};
+			opacity: .8;
+		}
+	}
+}
+
+.link {
+	@include link;
+
+    @media (any-hover: hover) {
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    &:active {
+        color: brig-color($accent, active);
+    }
+}
