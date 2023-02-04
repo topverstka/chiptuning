@@ -146,13 +146,13 @@
 					<div class="applic__wrapper">
 						<div class="s-header">
 							<h2 class="title-2 s-header__title applic__title">Запишись на бесплатный вебинар</h2>
-							<p class="text-gray s-header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis vel odio ut rutrum. Pellentesque vel tincidunt mi. In non nibh aliquet</p>
+							<p class="text-gray s-header__text applic__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis vel odio ut rutrum. Pellentesque vel tincidunt mi. In non nibh aliquet</p>
 						</div>
 						<div class="applic__body">
 							<form action="#" class="applic__form">
 								<label class="tf applic__tf">
 									<div class="tf__field">
-										<input type="text" name="user_">
+										<input type="text" name="user_phone" autocomplete="tel">
 										<span class="tf__label">Ваш номер телефона</span>
 									</div>
 								</label>
@@ -170,15 +170,100 @@
 							<h2 class="title-2 s-header__title reviews__title">Видео отзывы</h2>
 							<p class="text-gray s-header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis vel odio ut rutrum. Pellentesque vel tincidunt mi. In non nibh aliquet</p>
 						</div>
+						<div class="reviews__body">
+							<div class="swiper-container reviews__slider">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide reviews__slide"><img src="https://images.unsplash.com/photo-1581382575275-97901c2635b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt=""></div>
+									<div class="swiper-slide reviews__slide"><img src="./assets/img/face.jpg" alt=""></div>
+									<div class="swiper-slide reviews__slide"><img src="./assets/img/face.jpg" alt=""></div>
+									<div class="swiper-slide reviews__slide"><img src="https://images.unsplash.com/photo-1581382575275-97901c2635b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt=""></div>
+								</div>
+								<div class="reviews__pagin"></div>
+								<div class="swiper__arrows reviews__arrows">
+									<button class="reviews__arrow is-prev">
+										<svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.41436 14.0001L14.2073 23.793L12.793 25.2072L0.585938 13.0001L12.793 0.792969L14.2073 2.20718L4.41436 12.0001H25.0002V14.0001H4.41436Z"/>
+										</svg>
+									</button>
+									<button class="reviews__arrow is-next">
+										<svg style="transform: rotate(180deg);" width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.41436 14.0001L14.2073 23.793L12.793 25.2072L0.585938 13.0001L12.793 0.792969L14.2073 2.20718L4.41436 12.0001H25.0002V14.0001H4.41436Z"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="learn certif">
+				<div class="learn__container">
+					<div class="learn__wrapper">
+						<div class="s-header">
+							<h2 class="title-2 s-header__title learn__title">СЕРТИФИКАЦИЯ ЗА КАЖДЫЙ LVL</h2>
+							<p class="text-gray s-header__text learn__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisl, dictum nec nulla sit amet, elementum mollis urna.</p>
+						</div>
+						<div class="learn__body">
+							<div class="c-learn">
+								<span class="c-learn__lvl">LVL1</span>
+								<p class="text-gray c-learn__text">Lorem ipsum dolor sit amet, consectetur ad piscing elit. Fusce elit nisl, dictum nec nulla</p>
+								<div class="c-learn__img"><img src="./assets/img/certif-1.jpg" alt=""></div>
+							</div>
+							<div class="c-learn">
+								<span class="c-learn__lvl">LVL2</span>
+								<p class="text-gray c-learn__text">Lorem ipsum dolor sit amet, consectetur ad piscing elit. Fusce elit nisl, dictum nec nulla</p>
+								<div class="c-learn__img"><img src="./assets/img/certif-2.jpg" alt=""></div>
+							</div>
+							<div class="c-learn">
+								<span class="c-learn__lvl">LVL3</span>
+								<p class="text-gray c-learn__text">Lorem ipsum dolor sit amet, consectetur ad piscing elit. Fusce elit nisl, dictum nec nulla</p>
+								<div class="c-learn__img"><img src="./assets/img/certif-3.jpg" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="get" style="background-image: url(./assets/img/footer-car.jpg)">
+				<div class="get__container">
+					<div class="get__wrapper">
+						<div class="s-header get__header">
+							<h2 class="title-2 s-header__title get__title">ПОЛУЧИ ВОСТРЕБОВАННУЮ ПРОФЕССИЮ</h2>
+							<p class="text-gray s-header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisl, dictum nec nulla sit amet, elementum mollis urna.</p>
+						</div>
 					</div>
 				</div>
 			</section>
 		</div>
 		<footer class="footer">
-
+			<div class="footer__container">
+				<div class="footer__wrap">
+					<nav class="footer__menu">
+						<ul class="footer__menu-list">
+							<li class="footer__menu-item"><a href="#">Zur</a></li>
+							<li class="footer__menu-item"><a href="#">Strategie</a></li>
+							<li class="footer__menu-item"><a href="#">Programm</a></li>
+							<li class="footer__menu-item"><a href="#">Kosten</a></li>
+							<li class="footer__menu-item"><a href="#">Rückruf</a></li>
+						</ul>
+					</nav>
+					<div class="footer__more">
+						<a href="#" class="footer__logo"><img src="./assets/img/logo.png" alt=""></a>
+						<div class="footer__links">
+							<a href="#" class="footer__link">Policy</a>
+							<a href="#" class="footer__link">INFO@SYSTEM.COM</a>
+						</div>
+						<div class="socials footer__socials">
+							<a href="#" class="footer__social"><img src="./assets/img/telegram.svg" alt=""></a>
+							<a href="#" class="footer__social"><img src="./assets/img/twitter.svg" alt=""></a>
+							<a href="#" class="footer__social"><img src="./assets/img/instagram.svg" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</footer>
 	</div>
 
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="./assets/js/main.js"></script>
 </body>
 

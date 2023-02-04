@@ -1,0 +1,23 @@
+.certif {
+
+	& .c-learn {
+		padding-bottom: 38px;
+
+		& .c-learn__img {
+			margin-top: 72px;
+			margin-bottom: 0;
+
+			@media (max-width: $tablet) {
+				margin-top: 48px;
+			}
+
+			@media (max-width: $mobile-l) {
+				margin-top: 32px;
+			}
+		}
+
+		@media (max-width: $mobile-l) {
+			padding-bottom: 24px;
+		}
+	}
+}

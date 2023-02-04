@@ -137,3 +137,40 @@ menuCloseBtn.addEventListener('click', e => {
 	menu.classList.remove('is-show')
 	bodyUnlock()
 })
+
+// Swiper
+const swiper = new Swiper(".reviews__slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+	watchSlidesProgress: true,
+
+    breakpoints: {
+        1200: {
+
+        },
+        600: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		},
+        400: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+        },
+		0: {
+			slidesPerView: 1.2,
+			spaceBetween: 20,
+		}
+    },
+
+
+    navigation: {
+        nextEl: ".reviews__arrow.is-next",
+        prevEl: ".reviews__arrow.is-prev",
+    },
+
+	pagination: {
+		el: '.reviews__pagin',
+	}
+});
+
+console.log(swiper)

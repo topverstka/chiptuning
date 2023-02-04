@@ -1,0 +1,45 @@
+.get {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 1 / .6;
+	background: center top/cover no-repeat;
+	color: $light;
+
+	@media (max-width: $tablet) {
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,.5);
+		}
+	}
+}
+
+.get__header {
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	padding: 160px 0;
+
+	@media (max-width: $tablet) {
+		padding: 100px 0;
+	}
+
+	@media (max-width: $mobile-l) {
+		padding: 70px 0;
+	}
+}
+
+.get__title {
+	font-family: $ff-second;
+	font-weight: 500;
+	color: #9B9AA0;
+
+	@media (max-width: $tablet) {
+		color: $light;
+	}
+}

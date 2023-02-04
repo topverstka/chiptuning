@@ -150,7 +150,7 @@ body {
 
 // ========== БИБЛИОТЕКИ ==========
 
-// @import "./libs/swiper";
+@import "./libs/swiper";
 // @import "./libs/zoominimg";
 
 // ========== КОНЕЦ БИБЛИОТЕКИ ==========
@@ -175,4 +175,6 @@ body {
 @import "./sections/learn";
 @import "./sections/applic";
 @import "./sections/reviews";
+@import "./sections/certif";
+@import "./sections/get";
 @import "./sections/footer";
