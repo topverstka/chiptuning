@@ -87,6 +87,7 @@ $tr: .3s;
 html {
     min-width: $min-width;
 	max-height: 100vh;
+	scroll-behavior: smooth;
 
 	&.is-lock {
 
@@ -175,6 +176,8 @@ body {
 @import "./sections/learn";
 @import "./sections/applic";
 @import "./sections/reviews";
+@import "./sections/artic";
+@import "./sections/about";
 @import "./sections/certif";
 @import "./sections/get";
 @import "./sections/footer";

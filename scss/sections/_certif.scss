@@ -1,4 +1,7 @@
 .certif {
+	position: relative;
+	z-index: 1;
+	background-color: $frame-light;
 
 	& .c-learn {
 		padding-bottom: 38px;

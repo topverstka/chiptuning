@@ -135,35 +135,14 @@
 	}
 }
 
-.main-scroll {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 36px;
-	pointer-events: none;
-	user-select: none;
+.scroll-down.is-main {
 
-	@media (max-width: $hide-menu) {
-		gap: 16px;
-	}
-}
+	.scroll-down__text {
 
-.main-scroll__img {
-	width: 32px;
-	aspect-ratio: 1 / 1;
-}
-
-.main-scroll__text {
-	font-family: $ff-second;
-	font-size: 10px;
-	opacity: .36;
-	letter-spacing: .4em;
-	writing-mode: vertical-rl;
-	transform: rotate(180deg);
-
-	@media (max-width: $hide-menu) {
-		writing-mode: initial;
-		transform: none;
+		@media (max-width: $hide-menu) {
+			writing-mode: initial;
+			transform: none;
+		}
 	}
 }
 
