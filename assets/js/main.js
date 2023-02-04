@@ -173,4 +173,8 @@ const swiper = new Swiper(".reviews__slider", {
 	}
 });
 
-console.log(swiper)
+// // Lines in academy section
+// const academySection = document.querySelector('.academy')
+// const academyLinesContainer = document.createElement('div')
+
+// academyLinesContainer.classList.add('.academy__lines')
