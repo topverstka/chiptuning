@@ -28,6 +28,12 @@
 	cursor: pointer;
 	pointer-events: none;
 
+	@media (max-width: $mobile-l) {
+		opacity: 1;
+		pointer-events: fill;
+		transform: scale(1);
+	}
+
 	&::before {
 		content: '';
 		position: absolute;

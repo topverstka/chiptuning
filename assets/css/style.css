@@ -2113,6 +2113,13 @@ body {
   cursor: pointer;
   pointer-events: none;
 }
+@media (max-width: 450px) {
+  .reviews__slide {
+    opacity: 1;
+    pointer-events: fill;
+    transform: scale(1);
+  }
+}
 .reviews__slide::before {
   content: "";
   position: absolute;
