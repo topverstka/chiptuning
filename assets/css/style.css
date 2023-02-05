@@ -230,8 +230,6 @@ body {
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
-  cursor: -webkit-grab;
-  cursor: grab;
 }
 
 .swiper-android .swiper-slide,
@@ -2113,6 +2111,7 @@ body {
   transform: scale(0.9);
   transform-origin: center;
   cursor: pointer;
+  pointer-events: none;
 }
 .reviews__slide::before {
   content: "";
@@ -2142,6 +2141,13 @@ body {
 .reviews__slide.swiper-slide-visible {
   transform: scale(1);
   opacity: 1;
+  pointer-events: fill;
+}
+.reviews__slide.swiper-slide-visible img {
+  pointer-events: fill;
+  -webkit-user-select: all;
+     -moz-user-select: all;
+          user-select: all;
 }
 .reviews__slide img {
   position: absolute;
@@ -2154,10 +2160,6 @@ body {
      object-fit: cover;
   -webkit-mask: center/contain no-repeat url("../img/smartphone-screen.svg");
           mask: center/contain no-repeat url("../img/smartphone-screen.svg");
-  pointer-events: fill;
-  -webkit-user-select: all;
-     -moz-user-select: all;
-          user-select: all;
 }
 
 .reviews__pagin {

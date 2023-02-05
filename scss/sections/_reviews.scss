@@ -26,6 +26,7 @@
 	transform: scale(.9);
 	transform-origin: center;
 	cursor: pointer;
+	pointer-events: none;
 
 	&::before {
 		content: '';
@@ -69,6 +70,12 @@
 	&.swiper-slide-visible {
 		transform: scale(1);
 		opacity: 1;
+		pointer-events: fill;
+
+		& img {
+			pointer-events: fill;
+			user-select: all;
+		}
 	}
 
 	& img {
@@ -80,8 +87,6 @@
 		aspect-ratio: 1/2.03;
 		object-fit: cover;
 		mask: center/contain no-repeat url('../img/smartphone-screen.svg');
-		pointer-events: fill;
-		user-select: all;
 	}
 }
 
