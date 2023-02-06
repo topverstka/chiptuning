@@ -170,6 +170,7 @@ const swiper = new Swiper(".reviews__slider", {
 
 	pagination: {
 		el: '.reviews__pagin',
+		clickable: true,
 	}
 });
 
