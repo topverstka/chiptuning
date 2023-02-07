@@ -89,43 +89,44 @@
 	font-family: $ff-second;
 	font-size: 42px;
 	font-weight: 700;
+	line-height: 1.4;
 
-	&::before,
-	&::after {
-		content: '';
-		position: absolute;
-		width: 46px;
-		aspect-ratio: 1 / 1;
-		background: center/contain no-repeat url('../img/quotes.svg');
+	// &::before,
+	// &::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	width: 46px;
+	// 	aspect-ratio: 1 / 1;
+	// 	background: center/contain no-repeat url('../img/quotes.svg');
 
-		@media (max-width: 550px) {
-			width: 36px;
-		}
-	}
+	// 	@media (max-width: 550px) {
+	// 		width: 36px;
+	// 	}
+	// }
 
-	&::before {
-		top: 0;
-		left: 0;
-		transform: translate(calc(-100% - 26px), 0);
+	// &::before {
+	// 	top: 0;
+	// 	left: 0;
+	// 	transform: translate(calc(-100% - 26px), 0);
 
-		@media (max-width: 1000px) {
-			transform: translateY(calc(-100% - 8px));
-		}
-	}
+	// 	@media (max-width: 1000px) {
+	// 		transform: translateY(calc(-100% - 8px));
+	// 	}
+	// }
 
-	&::after {
-		bottom: 0;
-		right: 0;
-		transform: translate(calc(100% - 140px), 16px);
+	// &::after {
+	// 	bottom: 0;
+	// 	right: 0;
+	// 	transform: translate(calc(100% - 140px), 16px);
 
-		@media (max-width: $container-width) {
-			transform: translate(calc(100% - 40px), 16px);
-		}
+	// 	@media (max-width: $container-width) {
+	// 		transform: translate(calc(100% - 40px), 16px);
+	// 	}
 
-		@media (max-width: 1000px) {
-			transform: translateY(calc(100% - 8px));
-		}
-	}
+	// 	@media (max-width: 1000px) {
+	// 		transform: translateY(calc(100% - 8px));
+	// 	}
+	// }
 
 	@media (max-width: $tablet) {
 		font-size: 36px;
@@ -137,6 +138,38 @@
 
 	@media (max-width: $mobile-l) {
 		font-size: 26px;
+	}
+}
+
+.advant__title-quote {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 46px;
+		aspect-ratio: 1 / 1;
+		background: center/contain no-repeat url('../img/quotes.svg');
+
+		@media (max-width: 550px) {
+			width: 36px;
+		}
+	}
+
+	&.is-left::before {
+		top: 0;
+		left: 0;
+		transform: translate(calc(-100% - 26px), 0);
+
+		@media (max-width: 1000px) {
+			transform: translateY(calc(-100% - 8px));
+		}
+	}
+
+	&.is-right::before {
+		bottom: 0;
+		right: 0;
+		transform: translate(100%, 80%);
 	}
 }
 

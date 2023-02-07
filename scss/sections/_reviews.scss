@@ -41,7 +41,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		width: 120px;
+		width: 30%;
 		aspect-ratio: 1 / 1;
 		background: center/30% no-repeat create-rgba($accent, .4) url('data:image/svg+xml,%3Csvg width=\"37\" height=\"35\" viewBox=\"0 0 37 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M37 17L8 0V34.5L37 17Z\" fill=\"white\"/%3E%3C/svg%3E');
 		border-radius: 50%;
@@ -77,6 +77,8 @@
 		transform: scale(1);
 		opacity: 1;
 		pointer-events: fill;
+		box-shadow: 0 4px 20px rgb(0 0 0 / 40%);
+		border-radius: 12%;
 
 		& img {
 			pointer-events: fill;
@@ -113,7 +115,7 @@
 		transition: $tr;
 
 		&.swiper-pagination-bullet-active {
-			width: 14px;
+			transform: scale(1.2);
 			background-color: $accent;
 		}
 	}
@@ -137,7 +139,7 @@
 	justify-content: space-between;
 	pointer-events: none;
 
-	@media (max-width: $container-width) {
+	@media (max-width: 1550px) {
 		position: initial;
 		top: 0;
 		left: 0;
@@ -154,7 +156,7 @@
 }
 
 .reviews__arrow {
-	width: 136px;
+	width: 130px;
 	aspect-ratio: 1 / 1;
 	border: 2px solid #CDCDCD;
 	border-radius: 50%;
@@ -171,10 +173,6 @@
 		& path {
 			fill: #CDCDCD;
 			transition: $tr;
-
-			@media (max-width: $container-width) {
-				fill: $frame-dark;
-			}
 		}
 	}
 
@@ -183,19 +181,12 @@
 		&:hover {
 			background-color: $dark;
 			border-color: transparent;
-
-			@media (max-width: $container-width) {
-
-				& svg path {
-					fill: $light;
-				}
-			}
 		}
 	}
 
 	@media (max-width: $container-width) {
 		width: 80px;
-		border-color: $frame-dark;
+		// border-color: $frame-dark;
 	}
 
 	// @media (max-width: $tablet) {

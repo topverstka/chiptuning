@@ -22,6 +22,7 @@
 
 .applic__title {
 	font-family: $ff-second;
+	font-weight: 500;
 	opacity: .7;
 }
 
@@ -35,26 +36,43 @@
 
 .applic__form {
 	display: flex;
+	justify-content: center;
 	gap: 24px;
 
 	@media (max-width: $tablet) {
 		flex-direction: column;
 	}
+
+	@media (max-width: $mobile-l) {
+		gap: 16px;
+	}
 }
 
 .applic__tf {
 	--height: 100%;
+	max-width: 600px;
 
 	@media (max-width: $tablet) {
 		--height: 64px;
 		--padding-side: 24px;
+
+		max-width: none;
+	}
+
+	@media (max-width: $mobile-l) {
+		--height: 50px;
 	}
 }
 
 .applic__send {
 
 	@media (max-width: $tablet) {
+		height: 64px;
 		width: 100%;
+	}
+
+	@media (max-width: $mobile-l) {
+		height: 50px;
 	}
 }
 

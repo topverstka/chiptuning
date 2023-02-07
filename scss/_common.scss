@@ -183,8 +183,7 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 36px;
-	pointer-events: none;
-	user-select: none;
+	cursor: pointer;
 
 	@media (max-width: $hide-menu) {
 		gap: 16px;

@@ -29,8 +29,8 @@
 .artic__title {
 	font-family: $ff-second;
 	font-size: 30px;
-	font-weight: 400;
-	opacity: .7;
+	font-weight: 500;
+	color: #9B9AA0;
 
 	@media (max-width: $tablet) {
 		font-size: 26px;
@@ -198,7 +198,7 @@
 
 	@media (max-width: $mobile-l) {
 		font-size: 50px;
-		height: 25px;
+		height: 30px;
 	}
 }
 

@@ -5,7 +5,7 @@
 	background: center top/cover no-repeat;
 	color: $light;
 
-	@media (max-width: $tablet) {
+	@media (max-width: 1400px) {
 
 		&::before {
 			content: '';
@@ -39,7 +39,15 @@
 	font-weight: 500;
 	color: #9B9AA0;
 
-	@media (max-width: $tablet) {
+	@media (max-width: 1400px) {
 		color: $light;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: 22px;
+	}
+
+	@media (max-width: $mobile-m) {
+		font-size: 20px;
 	}
 }

@@ -85,6 +85,8 @@
 }
 
 .academy__content {
+	position: relative;
+	z-index: 1;
 	max-width: 500px;
 	width: 100%;
 
@@ -101,6 +103,7 @@
 }
 
 .academy__text {
+	text-shadow: 0 0 2px rgba(255,255,255,1), 0 0 2px rgba(255,255,255,1), 0 0 2px rgba(255,255,255,1), 0 0 2px rgba(255,255,255,1);
 	margin-top: 86px;
 
 	@media (max-width: $tablet) {

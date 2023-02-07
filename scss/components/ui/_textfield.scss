@@ -97,12 +97,17 @@
 	font-size: 20px;
 	letter-spacing: .2em;
 	color: $light;
+	text-transform: uppercase;
 	opacity: .2;
     display: inline-block;
     pointer-events: none;
     transition: $tr;
 
-	@media (max-width: $mobile-l) {
+	@media (max-width: 550px) {
 		font-size: 16px;
+	}
+
+	@media (max-width: $mobile-m) {
+		font-size: 14px;
 	}
 }

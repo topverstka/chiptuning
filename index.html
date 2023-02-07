@@ -36,7 +36,7 @@
 								</div>
 							</div>
 						</nav>
-						<a href="#call" class="btn is-light header__call-btn">CALL ME NOW</a>
+						<a href="#call" class="btn is-light header__call-btn">Узнать больше</a>
 						<button class="burger">
 							<span></span>
 							<span></span>
@@ -57,9 +57,9 @@
 							<p class="scroll-down__text">SCROLL DOWN</p>
 						</div>
 						<div class="socials main__socials">
-							<a href="#" class="socials__link"><img src="./assets/img/instagram.svg" alt=""></a>
 							<a href="#" class="socials__link"><img src="./assets/img/telegram.svg" alt=""></a>
 							<a href="#" class="socials__link"><img src="./assets/img/twitter.svg" alt=""></a>
+							<a href="#" class="socials__link"><img src="./assets/img/instagram.svg" alt=""></a>
 						</div>
 					</div>
 					<div class="main__img"><img src="./assets/img/main-car.png" alt=""></div>
@@ -75,7 +75,7 @@
 							<p class="text-gray academy__text">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisl, dictum nec nulla sit amet, elementum mollis urna. <br><br> Integer ut nunc vel justo tempor scelerisque. Donec laoreet iaculis lacus, convallis fringilla dolor luctus at. Proin ac ornare diam. Donec elit lectus, pulvinar in quam quis, tempus aucto
 							</p>
-							<a href="#call" class="btn is-accent academy__btn">Call me now</a>
+							<a href="#call" class="btn is-accent academy__btn">Узнать больше</a>
 						</div>
 						<div class="academy__img"><img src="./assets/img/car-academy.png" alt=""></div>
 					</div>
@@ -96,13 +96,17 @@
 					<div class="advant__wrapper">
 						<div class="advant__img"><img src="./assets/img/advant-man.jpg" alt=""></div>
 						<div class="advant__content">
-							<h2 class="advant__title">Я хочу, чтобы как можно больше специалистов получили работу</h2>
+							<h2 class="advant__title">
+								<span class="advant__title-quote is-left"></span>
+								<span class="advant__title-text">Я хочу, чтобы как можно больше специалистов получили работу</span>
+								<span class="advant__title-quote is-right"></span>
+							</h2>
 							<p class="text-gray advant__text">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisl, dictum nec nulla sit amet, elementum mollis urna.
 								<br><br>
 								Integer ut nunc vel justo tempor scelerisque. Donec laoreet iaculis lacus, convallis fringilla dolor luctus at. Proin ac ornare diam. Donec elit lectus, pulvinar in quam quis, tempus aucto
 							</p>
-							<a href="#call" class="btn is-accent advant__button">Call me now</a>
+							<a href="#call" class="btn is-accent advant__button">Узнать больше</a>
 							<div class="advant__list">
 								<div class="advant-block">
 									<p class="advant-block__num">970+</p>
@@ -162,7 +166,7 @@
 							<form action="#" class="applic__form">
 								<label class="tf applic__tf">
 									<div class="tf__field">
-										<input type="text" name="user_phone" autocomplete="tel">
+										<input type="text" name="user_phone" autocomplete="tel" data-input-phone>
 										<span class="tf__label">Ваш номер телефона</span>
 									</div>
 								</label>
@@ -329,10 +333,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="scroll-down about__scroll-down">
+						<!-- <div class="scroll-down about__scroll-down">
 							<div class="scroll-down__img"><img src="./assets/img/mouse.svg" alt=""></div>
 							<p class="scroll-down__text">SCROLL DOWN</p>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</section>
@@ -417,6 +421,7 @@
 	</div>
 
 	<script src="https://unpkg.com/swiper@8.0.7/swiper-bundle.min.js"></script>
+	<script src="./assets/js/inputmask.js"></script>
 	<script src="./assets/js/main.js"></script>
 </body>
 

@@ -174,6 +174,17 @@ const swiper = new Swiper(".reviews__slider", {
 	}
 });
 
+// Скролл при клике по кнопке "Scroll down"
+const scrollDownBtn = document.querySelector('.scroll-down.is-main')
+const mainScreen = document.querySelector('.main')
+
+scrollDownBtn.addEventListener('click', () => {
+	window.scrollTo(0, mainScreen.scrollHeight)
+})
+
+// Маска для номера телефона
+const inputPhone = document.querySelector('[data-input-phone]')
+Inputmask({mask: "+7 (999) 999-9999", showMaskOnHover: false}).mask(inputPhone)
 
 /**
  * Модальное окно
@@ -440,9 +451,6 @@ function lazyVideo() {
         }
 
         videoBlock.addEventListener('click', e => {
-
-			// if (!videoBlock.classList.contains('is-playing')) {
-			// }
 
 			const src = videoBlock.dataset.video
 
