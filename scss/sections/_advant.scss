@@ -149,7 +149,7 @@
 		position: absolute;
 		width: 46px;
 		aspect-ratio: 1 / 1;
-		background: center/contain no-repeat url('../img/quotes.svg');
+		background: center/contain no-repeat url('../img/icons/quotes.svg');
 
 		@media (max-width: 550px) {
 			width: 36px;
@@ -191,7 +191,8 @@
 
 .advant__list {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(min-content, 140px));
+	// grid-template-columns: repeat(auto-fill, minmax(min-content, 140px));
+	grid-template-columns: repeat(3, 1fr);
 	gap: 50px;
 	margin-top: 80px;
 

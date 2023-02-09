@@ -1,25 +1,21 @@
 // // ===== Вспомогательные функции =====
 
-// Является ли устройство сенсорным
-const isMobile = {
-	Android: function () {
-		return navigator.userAgent.match(/Android/i)
-	},
-	BlackBerry: function () {
-		return navigator.userAgent.match(/BlackBerry/i)
-	},
-	iOS: function () {
-		return navigator.userAgent.match(/iPhone|iPad|iPod/i)
-	},
-	Opera: function () {
-		return navigator.userAgent.match(/Opera Mini/i)
-	},
-	Windows: function () {
-		return navigator.userAgent.match(/IEMobile/i)
-	},
-	any: function () {
-		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows())
+// Проверка поддержки webp, добавление класса webp или no-webp для HTML
+isWebp()
+function isWebp() {
+	// Проверка поддержки webp
+	function testWebP(callback) {
+		let webP = new Image();
+		webP.onload = webP.onerror = function () {
+			callback(webP.height == 2);
+		};
+		webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
 	}
+	// Добавление класса _webp или _no-webp для HTML
+	testWebP(function (support) {
+		let className = support === true ? 'webp' : 'no-webp';
+		document.documentElement.classList.add(className);
+	});
 }
 
 // Удаляет у всех элементов items класс itemClass
@@ -121,23 +117,6 @@ function labelTextfield(container = document) {
 }
 labelTextfield()
 
-
-
-// Show menu
-const menu = document.querySelector('.menu')
-const burger = document.querySelector('.burger')
-const menuCloseBtn = document.querySelector('.menu__close')
-
-burger.addEventListener('click', e => {
-	menu.classList.add('is-show')
-	bodyLock()
-})
-
-menuCloseBtn.addEventListener('click', e => {
-	menu.classList.remove('is-show')
-	bodyUnlock()
-})
-
 // Swiper
 const swiper = new Swiper(".reviews__slider", {
     slidesPerView: 3,
@@ -176,10 +155,11 @@ const swiper = new Swiper(".reviews__slider", {
 
 // Скролл при клике по кнопке "Scroll down"
 const scrollDownBtn = document.querySelector('.scroll-down.is-main')
-const mainScreen = document.querySelector('.main')
 
 scrollDownBtn.addEventListener('click', () => {
-	window.scrollTo(0, mainScreen.scrollHeight)
+	const academySection = document.querySelector('.academy')
+
+	window.scrollTo(0, academySection.getBoundingClientRect().top)
 })
 
 // Маска для номера телефона

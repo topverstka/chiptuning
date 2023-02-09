@@ -1,9 +1,17 @@
 .get {
+	--cover-pos-y: 0px;
+
 	position: relative;
 	width: 100%;
 	aspect-ratio: 1 / .6;
-	background: center top/cover no-repeat;
+	background: center var(--cover-pos-y)/cover no-repeat;
+	background-image: url('../img/footer-car.jpg');
 	color: $light;
+	overflow: hidden;
+
+	.webp & {
+		background-image: url('../img/footer-car.webp');
+	}
 
 	@media (max-width: 1400px) {
 
@@ -16,6 +24,10 @@
 			height: 100%;
 			background-color: rgba(0,0,0,.5);
 		}
+	}
+
+	@media (max-width: 900px) {
+		aspect-ratio: initial;
 	}
 }
 
@@ -41,6 +53,10 @@
 
 	@media (max-width: 1400px) {
 		color: $light;
+	}
+
+	@media (max-width: 550px) {
+		font-size: 26px;
 	}
 
 	@media (max-width: $mobile-l) {

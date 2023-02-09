@@ -109,16 +109,18 @@ body {
 
 .wrapper {
     position: relative;
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+    // width: 100%;
+    // min-height: 100%;
+    // display: flex;
+    // flex-direction: column;
     overflow: hidden;
+
+
 
     & > .content {
         flex: 1 0 auto;
         position: relative;
-        z-index: 1;
+        // z-index: 1;
     }
 }
 
@@ -166,6 +168,9 @@ body {
 
 // Общие стили проекта
 @import "./common";
+
+// Стили для gsap анимации
+@import "./gsap-anim";
 
 
 // Секции

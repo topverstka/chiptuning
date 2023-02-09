@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
@@ -11,73 +11,96 @@
 
 <body>
 	<div class="wrapper">
-		<main class="main">
-			<header class="header">
-				<div class="header__container">
-					<div class="header__wrapper">
-						<a href="#" class="header__logo"><img src="./assets/img/logo.png" alt=""></a>
-						<nav class="menu">
-							<button class="menu__close">
+		<div class="main-inner">
+			<main class="main">
+				<header class="header">
+					<div class="header__container">
+						<div class="header__wrapper">
+							<a href="#" class="header__logo" aria-label="Логотип">
+								<picture>
+									<source srcset="./assets/img/logo.webp" type="image/webp">
+									<img src="./assets/img/logo.png" alt="">
+								</picture>
+							</a>
+							<nav class="menu">
+								<button class="menu__close">
+									<span></span>
+									<span></span>
+								</button>
+								<div class="menu__wrapper">
+									<ul class="menu__list">
+										<li class="menu__item"><a href="#">MAIN</a></li>
+										<li class="menu__item"><a href="#">PROGRAM</a></li>
+										<li class="menu__item"><a href="#">REWIUVES</a></li>
+										<li class="menu__item"><a href="#">PRODUCT</a></li>
+										<li class="menu__item"><a href="#">CONTACT</a></li>
+									</ul>
+									<div class="socials menu__socials">
+										<a href="#" class="socials__link"><img src="./assets/img/icons/instagram.svg" alt=""></a>
+										<a href="#" class="socials__link"><img src="./assets/img/icons/telegram.svg" alt=""></a>
+										<a href="#" class="socials__link"><img src="./assets/img/icons/twitter.svg" alt=""></a>
+									</div>
+								</div>
+							</nav>
+							<a href="#call" class="btn is-light header__call-btn">Узнать больше</a>
+							<button class="burger">
+								<span></span>
 								<span></span>
 								<span></span>
 							</button>
-							<div class="menu__wrapper">
-								<ul class="menu__list">
-									<li class="menu__item"><a href="#">MAIN</a></li>
-									<li class="menu__item"><a href="#">PROGRAM</a></li>
-									<li class="menu__item"><a href="#">REWIUVES</a></li>
-									<li class="menu__item"><a href="#">PRODUCT</a></li>
-									<li class="menu__item"><a href="#">CONTACT</a></li>
-								</ul>
-								<div class="socials menu__socials">
-									<a href="#" class="socials__link"><img src="./assets/img/instagram.svg" alt=""></a>
-									<a href="#" class="socials__link"><img src="./assets/img/telegram.svg" alt=""></a>
-									<a href="#" class="socials__link"><img src="./assets/img/twitter.svg" alt=""></a>
-								</div>
+						</div>
+					</div>
+				</header>
+				<div class="main__container">
+					<div class="main__wrapper">
+						<div class="main__content">
+							<h1 class="main__title">СHIPTUNING ACADEMY</h1>
+							<p class="text-gray main__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis vel odio ut rutrum. Pellentesque vel tincidunt mi. In non nibh aliquet</p>
+						</div>
+						<div class="main__tools">
+							<div class="scroll-down is-main">
+								<div class="scroll-down__img"><img src="./assets/img/icons/mouse.svg" alt=""></div>
+								<p class="scroll-down__text">SCROLL DOWN</p>
 							</div>
-						</nav>
-						<a href="#call" class="btn is-light header__call-btn">Узнать больше</a>
-						<button class="burger">
-							<span></span>
-							<span></span>
-							<span></span>
-						</button>
-					</div>
-				</div>
-			</header>
-			<div class="main__container">
-				<div class="main__wrapper">
-					<div class="main__content">
-						<h1 class="main__title">СHIPTUNING ACADEMY</h1>
-						<p class="text-gray main__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis vel odio ut rutrum. Pellentesque vel tincidunt mi. In non nibh aliquet</p>
-					</div>
-					<div class="main__tools">
-						<div class="scroll-down is-main">
-							<div class="scroll-down__img"><img src="./assets/img/mouse.svg" alt=""></div>
-							<p class="scroll-down__text">SCROLL DOWN</p>
+							<div class="socials main__socials">
+								<a href="#" class="socials__link"><img src="./assets/img/icons/telegram.svg" alt=""></a>
+								<a href="#" class="socials__link"><img src="./assets/img/icons/twitter.svg" alt=""></a>
+								<a href="#" class="socials__link"><img src="./assets/img/icons/instagram.svg" alt=""></a>
+							</div>
 						</div>
-						<div class="socials main__socials">
-							<a href="#" class="socials__link"><img src="./assets/img/telegram.svg" alt=""></a>
-							<a href="#" class="socials__link"><img src="./assets/img/twitter.svg" alt=""></a>
-							<a href="#" class="socials__link"><img src="./assets/img/instagram.svg" alt=""></a>
+						<div class="main__img">
+							<picture>
+								<source srcset="./assets/img/main-car.webp" type="image/webp">
+								<img src="./assets/img/main-car.png" alt="">
+							</picture>
 						</div>
 					</div>
-					<div class="main__img"><img src="./assets/img/main-car.png" alt=""></div>
 				</div>
-			</div>
-		</main>
+			</main>
+		</div>
 		<div class="content">
 			<section class="academy">
 				<div class="academy__container">
 					<div class="academy__wrapper">
 						<div class="academy__content">
-							<h2 class="title-2 academy__title">АКАДЕМИЯ ЧИПТЮНИНГА?</h2>
-							<p class="text-gray academy__text">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisl, dictum nec nulla sit amet, elementum mollis urna. <br><br> Integer ut nunc vel justo tempor scelerisque. Donec laoreet iaculis lacus, convallis fringilla dolor luctus at. Proin ac ornare diam. Donec elit lectus, pulvinar in quam quis, tempus aucto
-							</p>
-							<a href="#call" class="btn is-accent academy__btn">Узнать больше</a>
+							<div class="gsap-hidden">
+								<h2 class="title-2 academy__title">АКАДЕМИЯ ЧИПТЮНИНГА?</h2>
+							</div>
+							<div class="gsap-hidden">
+								<p class="text-gray academy__text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisl, dictum nec nulla sit amet, elementum mollis urna. <br><br> Integer ut nunc vel justo tempor scelerisque. Donec laoreet iaculis lacus, convallis fringilla dolor luctus at. Proin ac ornare diam. Donec elit lectus, pulvinar in quam quis, tempus aucto
+								</p>
+							</div>
+							<div class="academy__btn">
+								<a href="#call" class="btn is-accent">Узнать больше</a>
+							</div>
 						</div>
-						<div class="academy__img"><img src="./assets/img/car-academy.png" alt=""></div>
+						<div class="academy__img">
+							<picture>
+								<source srcset="./assets/img/car-academy.webp" type="image/webp">
+								<img src="./assets/img/car-academy.png" alt="">
+							</picture>
+						</div>
 					</div>
 				</div>
 				<div class="academy__lines is-vertical">
@@ -94,7 +117,12 @@
 			<section class="advant">
 				<div class="advant__container">
 					<div class="advant__wrapper">
-						<div class="advant__img"><img src="./assets/img/advant-man.jpg" alt=""></div>
+						<div class="advant__img">
+							<picture>
+								<source srcset="./assets/img/advant-man.webp" type="image/webp">
+								<img src="./assets/img/advant-man.png" alt="">
+							</picture>
+						</div>
 						<div class="advant__content">
 							<h2 class="advant__title">
 								<span class="advant__title-quote is-left"></span>
@@ -106,18 +134,20 @@
 								<br><br>
 								Integer ut nunc vel justo tempor scelerisque. Donec laoreet iaculis lacus, convallis fringilla dolor luctus at. Proin ac ornare diam. Donec elit lectus, pulvinar in quam quis, tempus aucto
 							</p>
-							<a href="#call" class="btn is-accent advant__button">Узнать больше</a>
+							<div class="advant__button">
+								<a href="#call" class="btn is-accent">Узнать больше</a>
+							</div>
 							<div class="advant__list">
 								<div class="advant-block">
-									<p class="advant-block__num">970+</p>
+									<p class="advant-block__num"><span>970</span>+</p>
 									<p class="text-gray advant-block__text">человек, успешно прошли обучение</p>
 								</div>
 								<div class="advant-block">
-									<p class="advant-block__num">150K+</p>
+									<p class="advant-block__num"><span>150</span>K+</p>
 									<p class="text-gray advant-block__text">человек, успешно прошли обучение</p>
 								</div>
 								<div class="advant-block">
-									<p class="advant-block__num">769</p>
+									<p class="advant-block__num"><span>769</span></p>
 									<p class="text-gray advant-block__text">человек, успешно прошли обучение</p>
 								</div>
 							</div>
@@ -125,31 +155,50 @@
 					</div>
 				</div>
 			</section>
-			<section class="learn">
+			<section class="learn gsap-learn">
 				<div class="learn__container">
 					<div class="learn__wrapper">
 						<div class="s-header">
-							<h2 class="title-2 s-header__title learn__title">3 варианта обучения</h2>
-							<p class="text-gray s-header__text learn__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisl, dictum nec nulla sit amet, elementum mollis urna.</p>
+							<div class="gsap-hidden">
+								<h2 class="title-2 s-header__title learn__title">3 варианта обучения</h2>
+							</div>
+							<div class="gsap-hidden">
+								<p class="text-gray s-header__text learn__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisl, dictum nec nulla sit amet, elementum mollis urna.</p>
+							</div>
 						</div>
 						<div class="learn__body">
 							<div class="c-learn">
 								<span class="c-learn__lvl">LVL1</span>
 								<p class="text-gray c-learn__text">Lorem ipsum dolor sit amet, consectetur ad piscing elit. Fusce elit nisl, dictum nec nulla</p>
 								<a href="#call" class="btn is-accent c-learn__btn">Узнать больше</a>
-								<div class="c-learn__img"><img src="./assets/img/variants-book-1.png" alt=""></div>
+								<div class="c-learn__img">
+									<picture>
+										<source srcset="./assets/img/variants-book-1.webp" type="image/webp">
+										<img src="./assets/img/variants-book-1.png" alt="">
+									</picture>
+								</div>
 							</div>
 							<div class="c-learn">
 								<span class="c-learn__lvl">LVL2</span>
 								<p class="text-gray c-learn__text">Lorem ipsum dolor sit amet, consectetur ad piscing elit. Fusce elit nisl, dictum nec nulla</p>
 								<a href="#call" class="btn is-accent c-learn__btn">Узнать больше</a>
-								<div class="c-learn__img"><img src="./assets/img/variants-book-2.png" alt=""></div>
+								<div class="c-learn__img">
+									<picture>
+										<source srcset="./assets/img/variants-book-2.webp" type="image/webp">
+										<img src="./assets/img/variants-book-2.png" alt="">
+									</picture>
+								</div>
 							</div>
 							<div class="c-learn">
 								<span class="c-learn__lvl">LVL3</span>
 								<p class="text-gray c-learn__text">Lorem ipsum dolor sit amet, consectetur ad piscing elit. Fusce elit nisl, dictum nec nulla</p>
 								<a href="#call" class="btn is-accent c-learn__btn">Узнать больше</a>
-								<div class="c-learn__img"><img src="./assets/img/variants-book-3.png" alt=""></div>
+								<div class="c-learn__img">
+									<picture>
+										<source srcset="./assets/img/variants-book-3.webp" type="image/webp">
+										<img src="./assets/img/variants-book-3.png" alt="">
+									</picture>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -159,8 +208,12 @@
 				<div class="applic__container">
 					<div class="applic__wrapper">
 						<div class="s-header">
-							<h2 class="title-2 s-header__title applic__title">Запишись на бесплатный вебинар</h2>
-							<p class="text-gray s-header__text applic__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis vel odio ut rutrum. Pellentesque vel tincidunt mi. In non nibh aliquet</p>
+							<div class="gsap-hidden">
+								<h2 class="title-2 s-header__title applic__title">Запишись на бесплатный вебинар</h2>
+							</div>
+							<div class="gsap-hidden">
+								<p class="text-gray s-header__text applic__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis vel odio ut rutrum. Pellentesque vel tincidunt mi. In non nibh aliquet</p>
+							</div>
 						</div>
 						<div class="applic__body">
 							<form action="#" class="applic__form">
@@ -170,9 +223,16 @@
 										<span class="tf__label">Ваш номер телефона</span>
 									</div>
 								</label>
-								<button class="btn is-accent applic__send">Записаться</button>
+								<div class="applic__send">
+									<button class="btn is-accent" type="submit">Записаться</button>
+								</div>
 							</form>
-							<div class="applic__img"><img src="./assets/img/applic-car.png" alt=""></div>
+							<div class="applic__img">
+								<picture>
+									<source srcset="./assets/img/applic-car.webp" type="image/webp">
+									<img src="./assets/img/applic-car.png" alt="">
+								</picture>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -181,16 +241,28 @@
 				<div class="reviews__container">
 					<div class="reviews__wrapper">
 						<div class="s-header">
-							<h2 class="title-2 s-header__title reviews__title">Видео отзывы</h2>
-							<p class="text-gray s-header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis vel odio ut rutrum. Pellentesque vel tincidunt mi. In non nibh aliquet</p>
+							<div class="gsap-hidden">
+								<h2 class="title-2 s-header__title reviews__title">Видео отзывы</h2>
+							</div>
+							<div class="gsap-hidden">
+								<p class="text-gray s-header__text reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis vel odio ut rutrum. Pellentesque vel tincidunt mi. In non nibh aliquet</p>
+							</div>
 						</div>
 						<div class="reviews__body">
 							<div class="swiper-container reviews__slider">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide reviews__slide" data-video="https://www.youtube.com/embed/rUxyKA_-grg" data-video-thumb="https://images.unsplash.com/photo-1581382575275-97901c2635b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"></div>
-									<div class="swiper-slide reviews__slide" data-video="https://www.youtube.com/embed/rUxyKA_-grg" data-video-thumb="./assets/img/face.jpg"></div>
-									<div class="swiper-slide reviews__slide" data-video="https://www.youtube.com/embed/rUxyKA_-grg" data-video-thumb="./assets/img/face.jpg"></div>
-									<div class="swiper-slide reviews__slide" data-video="https://www.youtube.com/embed/rUxyKA_-grg" data-video-thumb="https://images.unsplash.com/photo-1581382575275-97901c2635b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"></div>
+									<div class="swiper-slide reviews__slide">
+										<div class="c-reviews" data-video="https://www.youtube.com/embed/rUxyKA_-grg" data-video-thumb="https://images.unsplash.com/photo-1581382575275-97901c2635b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"></div>
+									</div>
+									<div class="swiper-slide reviews__slide">
+										<div class="c-reviews" data-video="https://www.youtube.com/embed/rUxyKA_-grg" data-video-thumb="./assets/img/face.jpg"></div>
+									</div>
+									<div class="swiper-slide reviews__slide">
+										<div class="c-reviews" data-video="https://www.youtube.com/embed/rUxyKA_-grg" data-video-thumb="./assets/img/face.jpg"></div>
+									</div>
+									<div class="swiper-slide reviews__slide">
+										<div class="c-reviews" data-video="https://www.youtube.com/embed/rUxyKA_-grg" data-video-thumb="https://images.unsplash.com/photo-1581382575275-97901c2635b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"></div>
+									</div>
 								</div>
 								<div class="reviews__pagin"></div>
 								<div class="swiper__arrows reviews__arrows">
@@ -214,7 +286,9 @@
 				<div class="artic__container">
 					<div class="artic__wrapper">
 						<div class="artic__header">
-							<h2 class="title-2 artic__title">ПОЛЕЗНЫЕ СТАТЬИ</h2>
+							<div class="gsap-hidden">
+								<h2 class="title-2 artic__title">ПОЛЕЗНЫЕ СТАТЬИ</h2>
+							</div>
 						</div>
 						<div class="artic__body">
 							<a href="#" class="c-artic">
@@ -247,7 +321,12 @@
 									<li class="c-artic__item">Замена кузовных деталей</li>
 									<li class="c-artic__item">Рихтовка</li>
 								</ul>
-								<div class="c-artic__img"><img src="./assets/img/article-3.png" alt=""></div>
+								<div class="c-artic__img">
+									<picture>
+										<source srcset="./assets/img/article-3.webp" type="image/webp">
+										<img src="./assets/img/article-3.png" alt="">
+									</picture>
+								</div>
 							</a>
 							<a href="#" class="c-artic is-accent">
 								<span class="c-artic__num">04</span>
@@ -258,7 +337,12 @@
 									<li class="c-artic__item">Отключение старт стоп</li>
 									<li class="c-artic__item">Сигнал непристегнутых ремней</li>
 								</ul>
-								<div class="c-artic__img"><img src="./assets/img/article-4.png" alt=""></div>
+								<div class="c-artic__img">
+									<picture>
+										<source srcset="./assets/img/article-4.webp" type="image/webp">
+										<img src="./assets/img/article-4.png" alt="">
+									</picture>
+								</div>
 							</a>
 							<a href="#" class="c-artic">
 								<span class="c-artic__num">05</span>
@@ -297,7 +381,12 @@
 									<li class="c-artic__item">Програмное увеличение мощности</li>
 									<li class="c-artic__item">Установка тюнинг комплектов</li>
 								</ul>
-								<div class="c-artic__img"><img src="./assets/img/article-8.png" alt=""></div>
+								<div class="c-artic__img">
+									<picture>
+										<source srcset="./assets/img/article-8.webp" type="image/webp">
+										<img src="./assets/img/article-8.png" alt="">
+									</picture>
+								</div>
 							</a>
 						</div>
 					</div>
@@ -306,28 +395,38 @@
 			<section class="about">
 				<div class="about__container">
 					<div class="about__wrapper">
-						<div class="about__img"><img src="./assets/img/about-man.png" alt=""></div>
+						<div class="about__img">
+							<picture>
+								<source srcset="./assets/img/about-man.webp" type="image/webp">
+								<img src="./assets/img/about-man.png" alt="">
+							</picture>
+						</div>
 						<div class="about__content">
 							<div class="about__header">
-								<h2 class="title-2 about__title">Станислав Касин</h2>
-								<p class="text-gray about__text">Официально представлен в списках рекомендуемых тренеров по калибровкам от немецкого тюнинг ателье и разработчика WinOLS</p>
+								<div class="gsap-hidden">
+									<h2 class="title-2 about__title">Станислав Касин</h2>
+								</div>
+								<div class="about__title-line"></div>
+								<div class="gsap-hidden">
+									<p class="text-gray about__text">Официально представлен в списках рекомендуемых тренеров по калибровкам от немецкого тюнинг ателье и разработчика WinOLS</p>
+								</div>
 							</div>
 							<div class="about__body">
 								<div class="c-about">
 									<div class="c-about__content">
-										<p class="c-about__num">5000+</p>
+										<p class="c-about__num"><span>5000</span>+</p>
 										<p class="c-about__text">клиентов в базе</p>
 									</div>
 								</div>
 								<div class="c-about">
 									<div class="c-about__content">
-										<p class="c-about__num">300+</p>
+										<p class="c-about__num"><span>300</span>+</p>
 										<p class="c-about__text">выпускников со средним доходом 150.000р</p>
 									</div>
 								</div>
 								<div class="c-about">
 									<div class="c-about__content">
-										<p class="c-about__num">с 2008</p>
+										<p class="c-about__num">с <span>2008</span></p>
 										<p class="c-about__text">года эксперт по ремонту автомобилей</p>
 									</div>
 								</div>
@@ -344,35 +443,58 @@
 				<div class="learn__container">
 					<div class="learn__wrapper">
 						<div class="s-header">
-							<h2 class="title-2 s-header__title learn__title">СЕРТИФИКАЦИЯ ЗА КАЖДЫЙ LVL</h2>
-							<p class="text-gray s-header__text learn__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisl, dictum nec nulla sit amet, elementum mollis urna.</p>
+							<div class="gsap-hidden">
+								<h2 class="title-2 s-header__title learn__title certif__title">СЕРТИФИКАЦИЯ ЗА КАЖДЫЙ LVL</h2>
+							</div>
+							<div class="gsap-hidden">
+								<p class="text-gray s-header__text learn__text certif__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisl, dictum nec nulla sit amet, elementum mollis urna.</p>
+							</div>
 						</div>
 						<div class="learn__body">
-							<div class="c-learn">
+							<div class="c-learn c-certif">
 								<span class="c-learn__lvl">LVL1</span>
 								<p class="text-gray c-learn__text">Lorem ipsum dolor sit amet, consectetur ad piscing elit. Fusce elit nisl, dictum nec nulla</p>
-								<div class="c-learn__img"><img src="./assets/img/certif-1.jpg" alt=""></div>
+								<div class="c-learn__img">
+									<picture>
+										<source srcset="./assets/img/certif-1.webp" type="image/webp">
+										<img src="./assets/img/certif-1.png" alt="">
+									</picture>
+								</div>
 							</div>
-							<div class="c-learn">
+							<div class="c-learn c-certif">
 								<span class="c-learn__lvl">LVL2</span>
 								<p class="text-gray c-learn__text">Lorem ipsum dolor sit amet, consectetur ad piscing elit. Fusce elit nisl, dictum nec nulla</p>
-								<div class="c-learn__img"><img src="./assets/img/certif-2.jpg" alt=""></div>
+								<div class="c-learn__img">
+									<picture>
+										<source srcset="./assets/img/certif-2.webp" type="image/webp">
+										<img src="./assets/img/certif-2.png" alt="">
+									</picture>
+								</div>
 							</div>
-							<div class="c-learn">
+							<div class="c-learn c-certif">
 								<span class="c-learn__lvl">LVL3</span>
 								<p class="text-gray c-learn__text">Lorem ipsum dolor sit amet, consectetur ad piscing elit. Fusce elit nisl, dictum nec nulla</p>
-								<div class="c-learn__img"><img src="./assets/img/certif-3.jpg" alt=""></div>
+								<div class="c-learn__img">
+									<picture>
+										<source srcset="./assets/img/certif-3.webp" type="image/webp">
+										<img src="./assets/img/certif-3.png" alt="">
+									</picture>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="get" style="background-image: url(./assets/img/footer-car.jpg)">
+			<section class="get">
 				<div class="get__container">
 					<div class="get__wrapper">
 						<div class="s-header get__header">
-							<h2 class="title-2 s-header__title get__title">ПОЛУЧИ ВОСТРЕБОВАННУЮ ПРОФЕССИЮ</h2>
-							<p class="text-gray s-header__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisl, dictum nec nulla sit amet, elementum mollis urna.</p>
+							<div class="gsap-hidden">
+								<h2 class="title-2 s-header__title get__title">ПОЛУЧИ ВОСТРЕБОВАННУЮ ПРОФЕССИЮ</h2>
+							</div>
+							<div class="gsap-hidden">
+								<p class="text-gray s-header__text get__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit nisl, dictum nec nulla sit amet, elementum mollis urna.</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -391,15 +513,20 @@
 						</ul>
 					</nav>
 					<div class="footer__more">
-						<a href="#" class="footer__logo"><img src="./assets/img/logo.png" alt=""></a>
+						<a href="#" class="footer__logo" aria-label="Логотип">
+							<picture>
+								<source srcset="./assets/img/logo.webp" type="image/webp">
+								<img src="./assets/img/logo.png" alt="">
+							</picture>
+						</a>
 						<div class="footer__links">
 							<a href="#" class="footer__link">Policy</a>
 							<a href="#" class="footer__link">INFO@SYSTEM.COM</a>
 						</div>
 						<div class="socials footer__socials">
-							<a href="#" class="footer__social"><img src="./assets/img/telegram.svg" alt=""></a>
-							<a href="#" class="footer__social"><img src="./assets/img/twitter.svg" alt=""></a>
-							<a href="#" class="footer__social"><img src="./assets/img/instagram.svg" alt=""></a>
+							<a href="#" class="footer__social"><img src="./assets/img/icons/telegram.svg" alt=""></a>
+							<a href="#" class="footer__social"><img src="./assets/img/icons/twitter.svg" alt=""></a>
+							<a href="#" class="footer__social"><img src="./assets/img/icons/instagram.svg" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -420,8 +547,11 @@
 		</div>
 	</div>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+	<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 	<script src="https://unpkg.com/swiper@8.0.7/swiper-bundle.min.js"></script>
 	<script src="./assets/js/inputmask.js"></script>
+	<script src="./assets/js/animate.js"></script>
 	<script src="./assets/js/main.js"></script>
 </body>
 

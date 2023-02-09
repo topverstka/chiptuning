@@ -64,7 +64,7 @@
 	}
 }
 
-.applic__send {
+.applic__send .btn {
 
 	@media (max-width: $tablet) {
 		height: 64px;
@@ -85,6 +85,7 @@
 
 	& img {
 		width: 140%;
+		height: auto;
 		margin-top: -10%;
 		margin-bottom: -24%;
 	}
