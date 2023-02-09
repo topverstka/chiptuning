@@ -87,6 +87,24 @@ function bodyLock(delay = 100) {
 	}
 }
 
+// Загрузка страницы
+const imgLoadedStart = new Date().getMilliseconds()
+const preloader = document.querySelector('.preloader')
+const imgLoaded = imagesLoaded( document.body, instance => {
+	const imgLoadedEnd = new Date().getMilliseconds()
+	let timeLoaded = imgLoadedEnd - imgLoadedStart
+
+	setTimeout(() => {
+		preloader.classList.add('is-hide')
+
+		setTimeout(() => {
+			// document.body.style.height = 'auto'
+			document.documentElement.classList.add('is-loaded')
+			bodyUnlock()
+		}, 500)
+	}, timeLoaded < 1000 ? 1000 - timeLoaded : 0)
+} )
+
 // Плейсхолдер текстовых полей
 function labelTextfield(container = document) {
 	const tfElems = container.querySelectorAll('.tf')
