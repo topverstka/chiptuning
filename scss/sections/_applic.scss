@@ -83,6 +83,11 @@
 	pointer-events: none;
 	user-select: none;
 
+	& picture {
+		display: flex;
+		justify-content: center;
+	}
+
 	& img {
 		width: 140%;
 		height: auto;

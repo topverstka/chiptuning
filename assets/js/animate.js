@@ -108,6 +108,20 @@ gsap.set('.menu__socials', {
 })
 
 burger.addEventListener('click', e => {
+	menuShow()
+})
+
+menuCloseBtn.addEventListener('click', e => {
+	menuHide()
+})
+
+menu.querySelectorAll('.menu__item a').forEach(link => {
+	link.addEventListener('click', e => {
+		menuHide()
+	})
+})
+
+function menuShow() {
 	menu.classList.add('is-show')
 	bodyLock()
 
@@ -121,9 +135,9 @@ burger.addEventListener('click', e => {
 		.to('.menu__socials', {
 			opacity: 1,
 		})
-})
+}
 
-menuCloseBtn.addEventListener('click', e => {
+function menuHide() {
 	tlMenu
 		.to('.menu__item a', {
 			stagger: {
@@ -138,7 +152,7 @@ menuCloseBtn.addEventListener('click', e => {
 			menu.classList.remove('is-show')
 			bodyUnlock()
 		})
-})
+}
 
 // Экран "Академия чиптюнинга"
 const tlAcademy = gsap.timeline({
@@ -229,7 +243,7 @@ tlAdvant
 const tlLearn = gsap.timeline({
 	scrollTrigger: {
 		trigger: '.learn',
-		start: "top 20%",
+		start: `top ${window.innerWidth > 500 ? '20%' : 'center'}`,
 		toggleActions: "play pause resume reverse",
 	}
 })
@@ -256,7 +270,7 @@ tlLearn
 const tlApplic = gsap.timeline({
 	scrollTrigger: {
 		trigger: ".applic",
-		start: "top 20%",
+		start: `top ${window.innerWidth > 500 ? '20%' : 'center'}`,
 		toggleActions: "play pause resume none",
 	}
 })
@@ -310,7 +324,7 @@ tlCarApplic
 const tlReviews = gsap.timeline({
 	scrollTrigger: {
 		trigger: ".reviews",
-		start: "top 20%",
+		start: `top ${window.innerWidth > 500 ? '20%' : 'center'}`,
 		toggleActions: "play pause resume none",
 	}
 })
@@ -343,7 +357,7 @@ tlReviews
 const tlArtic = gsap.timeline({
 	scrollTrigger: {
 		trigger: ".artic",
-		start: "top 20%",
+		start: `top ${window.innerWidth > 500 ? '20%' : 'center'}`,
 		toggleActions: "play pause resume none",
 	}
 })
@@ -365,7 +379,7 @@ tlArtic
 const tlAbout = gsap.timeline({
 	scrollTrigger: {
 		trigger: ".about",
-		start: "top 20%",
+		start: `top ${window.innerWidth > 500 ? '20%' : 'center'}`,
 		toggleActions: "play pause resume none",
 	}
 })
@@ -421,7 +435,7 @@ if (isMobile.any()) {
 const tlCertif = gsap.timeline({
 	scrollTrigger: {
 		trigger: '.certif',
-		start: "top 20%",
+		start: `top ${window.innerWidth > 500 ? '20%' : 'center'}`,
 		toggleActions: "play pause resume none",
 	}
 })

@@ -1464,6 +1464,10 @@ body {
   justify-content: center;
   margin-top: 112px;
 }
+.main__img picture {
+  display: flex;
+  justify-content: center;
+}
 .main__img img {
   width: 103.5%;
 }
@@ -1663,6 +1667,10 @@ body {
   right: 0;
   transform: translate(0, -50%);
   width: 60vw;
+}
+.academy__img picture {
+  display: flex;
+  justify-content: flex-end;
 }
 @media (max-width: 800px) {
   .academy__img {
@@ -2086,6 +2094,10 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+.applic__img picture {
+  display: flex;
+  justify-content: center;
 }
 .applic__img img {
   width: 140%;

@@ -104,6 +104,11 @@
 	margin-top: 112px;
 	// margin-top: 300px;
 
+	& picture {
+		display: flex;
+		justify-content: center;
+	}
+
 	& img {
 		width: 103.5%;
 

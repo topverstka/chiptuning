@@ -140,6 +140,11 @@
 	transform: translate(0, -50%);
 	width: 60vw;
 
+	& picture {
+		display: flex;
+		justify-content: flex-end;
+	}
+
 	@media (max-width: $tablet) {
 		position: initial;
 		display: flex;
