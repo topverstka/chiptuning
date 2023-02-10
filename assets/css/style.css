@@ -327,11 +327,13 @@ body {
 }
 
 .swiper-horizontal.swiper-css-mode > .swiper-wrapper {
-  scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
 }
 
 .swiper-vertical.swiper-css-mode > .swiper-wrapper {
-  scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
 }
 
 .swiper-centered > .swiper-wrapper::before {
@@ -522,7 +524,8 @@ body {
   margin-top: -21px;
   z-index: 10;
   transform-origin: 50%;
-  animation: swiper-preloader-spin 1s infinite linear;
+  -webkit-animation: swiper-preloader-spin 1s infinite linear;
+          animation: swiper-preloader-spin 1s infinite linear;
   box-sizing: border-box;
   border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
   border-radius: 50%;
@@ -535,6 +538,12 @@ body {
 
 .swiper-lazy-preloader-black {
   --swiper-preloader-color: #000;
+}
+
+@-webkit-keyframes swiper-preloader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes swiper-preloader-spin {
@@ -709,6 +718,7 @@ body {
   white-space: nowrap;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   transition: 0.3s;
 }
@@ -842,7 +852,7 @@ body {
 }
 @media (max-width: 450px) {
   .tf__field input,
-  .tf__field textarea {
+.tf__field textarea {
     font-size: 16px;
   }
 }
@@ -1120,7 +1130,8 @@ body {
   font-size: 10px;
   opacity: 0.36;
   letter-spacing: 0.4em;
-  writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
 
@@ -1162,27 +1173,41 @@ body {
   height: 13px;
   border-radius: 50%;
   background: #fff;
-  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+          animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 
 .preloader__icon div:nth-child(1) {
   left: 8px;
-  animation: lds-ellipsis1 0.6s infinite;
+  -webkit-animation: lds-ellipsis1 0.6s infinite;
+          animation: lds-ellipsis1 0.6s infinite;
 }
 
 .preloader__icon div:nth-child(2) {
   left: 8px;
-  animation: lds-ellipsis2 0.6s infinite;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
 }
 
 .preloader__icon div:nth-child(3) {
   left: 32px;
-  animation: lds-ellipsis2 0.6s infinite;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
 }
 
 .preloader__icon div:nth-child(4) {
   left: 56px;
-  animation: lds-ellipsis3 0.6s infinite;
+  -webkit-animation: lds-ellipsis3 0.6s infinite;
+          animation: lds-ellipsis3 0.6s infinite;
+}
+
+@-webkit-keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes lds-ellipsis1 {
@@ -1193,12 +1218,28 @@ body {
     transform: scale(1);
   }
 }
+@-webkit-keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 @keyframes lds-ellipsis3 {
   0% {
     transform: scale(1);
   }
   100% {
     transform: scale(0);
+  }
+}
+@-webkit-keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
   }
 }
 @keyframes lds-ellipsis2 {
@@ -1468,6 +1509,11 @@ body {
   flex-direction: column;
   height: 100%;
 }
+@media (max-width: 700px) {
+  .main {
+    min-height: 120vh;
+  }
+}
 
 .main__container {
   margin-top: 120px;
@@ -1612,7 +1658,8 @@ body {
 
 @media (max-width: 900px) {
   .scroll-down.is-main .scroll-down__text {
-    writing-mode: initial;
+    -ms-writing-mode: initial;
+        writing-mode: initial;
     transform: none;
   }
 }
@@ -1965,6 +2012,7 @@ body {
 }
 @media (max-width: 1000px) {
   .advant__list {
+    grid-template-columns: repeat(auto-fill, minmax(-webkit-min-content, 140px));
     grid-template-columns: repeat(auto-fill, minmax(min-content, 140px));
   }
 }
@@ -2191,6 +2239,7 @@ body {
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 .applic__img picture {
@@ -2258,6 +2307,7 @@ body {
   background: center/cover no-repeat url("../img/smartphone.png");
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   border-radius: 12%;
@@ -3025,4 +3075,4 @@ body {
   .footer__social:hover {
     opacity: 0.4;
   }
-}
+}/*# sourceMappingURL=style.css.map */
