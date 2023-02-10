@@ -1511,7 +1511,7 @@ body {
 }
 @media (max-width: 700px) {
   .main {
-    min-height: 120vh;
+    min-height: 110vh;
   }
 }
 
@@ -1529,6 +1529,11 @@ body {
 @media (max-width: 800px) {
   .main__wrapper {
     padding-bottom: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .main__wrapper {
+    padding-bottom: 20vh;
   }
 }
 
