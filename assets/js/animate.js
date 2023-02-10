@@ -298,9 +298,10 @@ tlApplic
 const tlCarApplic = gsap.timeline({
 	scrollTrigger: {
 		trigger: ".applic",
-		start: "top 20%",
-		end: "bottom 20%",
+		start: `top ${window.innerWidth > 800 ? 'top' : '40%'}`,
+		end: "bottom top",
 		scrub: 1,
+		markers: true,
 	}
 })
 
@@ -311,7 +312,7 @@ tlCarApplic
 	.fromTo(applicCar,
 		{
 			x: applicCarRect.right,
-			xPercent: 100
+			// xPercent: 100
 		},
 		{
 			x: -applicCarRect.left,
@@ -462,8 +463,9 @@ tlCertif
 const tlGet = gsap.timeline({
 	scrollTrigger: {
 		trigger: '.get',
-		start: `top ${window.innerWidth > 500 ? '20%' : 'center'}`,
+		start: `top ${window.innerWidth > 800 ? '20%' : 'center'}`,
 		toggleActions: "play pause resume none",
+		// markers: true,
 	}
 })
 

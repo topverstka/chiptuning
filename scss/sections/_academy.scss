@@ -139,6 +139,7 @@
 	right: 0;
 	transform: translate(0, -50%);
 	width: 60vw;
+	@include resVal(right, -160, 0, 801, 1200);
 
 	& picture {
 		display: flex;

@@ -169,7 +169,11 @@
 	&.is-right::before {
 		bottom: 0;
 		right: 0;
-		transform: translate(100%, 80%);
+		transform: translate(150%, 20%);
+
+		@media (max-width: 550px) {
+			transform: translate(120%, 20%);
+		}
 	}
 }
 

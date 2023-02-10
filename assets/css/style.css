@@ -1499,7 +1499,7 @@ body {
   font-size: 54px;
   letter-spacing: 0.55em;
   opacity: 0.72;
-  color: #87868A;
+  color: #9b9aa0;
 }
 @media (max-width: 1264px) {
   .main__title {
@@ -1749,6 +1749,11 @@ body {
   transform: translate(0, -50%);
   width: 60vw;
 }
+@media (min-width: 801px) and (max-width: 1200px) {
+  .academy__img {
+    right: calc( (100vw - 801px)/(1200 - 801) * (0 - -160) + -160px);
+  }
+}
 .academy__img picture {
   display: flex;
   justify-content: flex-end;
@@ -1914,7 +1919,12 @@ body {
 .advant__title-quote.is-right::before {
   bottom: 0;
   right: 0;
-  transform: translate(100%, 80%);
+  transform: translate(150%, 20%);
+}
+@media (max-width: 550px) {
+  .advant__title-quote.is-right::before {
+    transform: translate(120%, 20%);
+  }
 }
 
 .advant__text {
