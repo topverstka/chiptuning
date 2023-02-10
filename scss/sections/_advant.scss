@@ -91,45 +91,12 @@
 	font-weight: 700;
 	line-height: 1.4;
 
-	// &::before,
-	// &::after {
-	// 	content: '';
-	// 	position: absolute;
-	// 	width: 46px;
-	// 	aspect-ratio: 1 / 1;
-	// 	background: center/contain no-repeat url('../img/quotes.svg');
-
-	// 	@media (max-width: 550px) {
-	// 		width: 36px;
-	// 	}
-	// }
-
-	// &::before {
-	// 	top: 0;
-	// 	left: 0;
-	// 	transform: translate(calc(-100% - 26px), 0);
-
-	// 	@media (max-width: 1000px) {
-	// 		transform: translateY(calc(-100% - 8px));
-	// 	}
-	// }
-
-	// &::after {
-	// 	bottom: 0;
-	// 	right: 0;
-	// 	transform: translate(calc(100% - 140px), 16px);
-
-	// 	@media (max-width: $container-width) {
-	// 		transform: translate(calc(100% - 40px), 16px);
-	// 	}
-
-	// 	@media (max-width: 1000px) {
-	// 		transform: translateY(calc(100% - 8px));
-	// 	}
-	// }
-
 	@media (max-width: $tablet) {
 		font-size: 36px;
+	}
+
+	@media (max-width: 700px) {
+		font-size: 34px;
 	}
 
 	@media (max-width: 550px) {
@@ -171,7 +138,7 @@
 		right: 0;
 		transform: translate(150%, 20%);
 
-		@media (max-width: 550px) {
+		@media (max-width: 700px) {
 			transform: translate(120%, 20%);
 		}
 	}

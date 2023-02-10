@@ -301,7 +301,6 @@ const tlCarApplic = gsap.timeline({
 		start: `top ${window.innerWidth > 800 ? 'top' : '40%'}`,
 		end: "bottom top",
 		scrub: 1,
-		markers: true,
 	}
 })
 

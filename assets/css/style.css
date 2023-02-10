@@ -1880,6 +1880,11 @@ body {
     font-size: 36px;
   }
 }
+@media (max-width: 700px) {
+  .advant__title {
+    font-size: 34px;
+  }
+}
 @media (max-width: 550px) {
   .advant__title {
     font-size: 30px;
@@ -1921,7 +1926,7 @@ body {
   right: 0;
   transform: translate(150%, 20%);
 }
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   .advant__title-quote.is-right::before {
     transform: translate(120%, 20%);
   }
