@@ -33,7 +33,15 @@ const tlMain = gsap.timeline({
 		start: "top top",
 		pin: true,
 		scrub: 1,
-	}
+		onLeave: () => {
+			const mainSectionParent = document.querySelector('.main-inner').closest('.pin-spacer')
+			mainSectionParent.style.pointerEvents = 'none'
+		},
+		onEnterBack: () => {
+			const mainSectionParent = document.querySelector('.main-inner').closest('.pin-spacer')
+			mainSectionParent.style.pointerEvents = 'fill'
+		}
+	},
 })
 
 tlMain.to(".header", {
@@ -59,6 +67,21 @@ tlMain.to(".scroll-down.is-main",
 	{}
 )
 
+// console.log(document.querySelector('.main__tools').getBoundingClientRect().bottom)
+
+// Верхний отрицательный отступ у раздела academy, равный высоте этой секции
+academySectionSetMarginTop()
+function academySectionSetMarginTop() {
+	const academySection = document.querySelector('.academy')
+	const mainSection = document.querySelector('.main')
+
+	const interval = setInterval(() => {
+		if (mainSection.closest('.pin-spacer')) {
+			academySection.style.marginTop = "-" + mainSection.closest('.pin-spacer').style.paddingBottom
+			clearInterval(interval)
+		}
+	}, 100)
+}
 
 tlMain.to(".main__img", {
 	y: () => {
@@ -68,14 +91,64 @@ tlMain.to(".main__img", {
 		return ((mainImgRect.top - window.innerHeight / 2) + mainImgHeight / 2) * -1
 	},
 	duration: 3,
-	scale: 1.05
+	scale: 1.05,
+	// pinSpacing: false,
 }, ">-0.5")
+tlMain.to(".main__tools", {
+	// bottom: 32,
+	bottom: document.querySelector('.main').scrollHeight - window.innerHeight + 24,
+	// pinSpacing: false,
+	duration: 3,
 
+}, "<")
 tlMain.to(".main__img", {
 	x: -document.querySelector('.main__img').getBoundingClientRect().left - 50,
 	xPercent: -100,
-	duration: 3
+	duration: 3,
+	// scrollTrigger: {
+	// 	pinSpacing: false,
+	// },
 })
+tlMain.to(".main-inner", {
+	height: "100vh",
+	minHeight: "100vh",
+	maxHeight: "100vh",
+	// marginTop: "-110vh",
+	duration: 3,
+	scrollTrigger: {
+		pinSpacing: false,
+	},
+}, "<")
+tlMain.to(".main__tools", {
+	bottom: 24,
+	// bottom: document.querySelector('.main').scrollHeight - window.innerHeight + 24,
+
+	scrollTrigger: {
+		pinSpacing: false,
+		onLeave: () => console.log('ok')
+	},
+	duration: 3,
+
+}, "<")
+// tlMain.to(".academy", {
+// 	// marginTop: ,
+
+// 	scrollTrigger: {
+// 		pinSpacing: false,
+// 	},
+// 	duration: 3,
+
+// }, "<")
+tlMain.to(".main-inner", {
+	opacity: 0,
+	pointerEvents: "none",
+
+}, "<2")
+// tlMain.to(".academy", {
+// 	marginTop: "-100vh",
+// 	duration: 3,
+// 	pinSpacing: false,
+// }, "<")
 
 // Расстояние скролла и соц. сетей от нижней части экрана на главном экране
 
@@ -161,7 +234,7 @@ const tlAcademy = gsap.timeline({
 	},
 	scrollTrigger: {
 		trigger: '.academy',
-		start: 'top center',
+		start: 'top 50',
 		toggleActions: "play pause resume reverse",
 	}
 })
