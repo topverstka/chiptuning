@@ -171,15 +171,6 @@ const swiper = new Swiper(".reviews__slider", {
 	}
 });
 
-// Скролл при клике по кнопке "Scroll down"
-const scrollDownBtn = document.querySelector('.scroll-down.is-main')
-
-scrollDownBtn.addEventListener('click', () => {
-	const academySection = document.querySelector('.academy')
-
-	window.scrollTo(0, academySection.getBoundingClientRect().top)
-})
-
 // Маска для номера телефона
 const inputPhone = document.querySelector('[data-input-phone]')
 Inputmask({mask: "+7 (999) 999-9999", showMaskOnHover: false}).mask(inputPhone)

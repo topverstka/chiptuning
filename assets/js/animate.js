@@ -33,6 +33,7 @@ const tlMain = gsap.timeline({
 		start: "top top",
 		pin: true,
 		scrub: 1,
+		markers: true,
 		onLeave: () => {
 			const mainSectionParent = document.querySelector('.main-inner').closest('.pin-spacer')
 			mainSectionParent.style.pointerEvents = 'none'
@@ -67,8 +68,19 @@ tlMain.to(".scroll-down.is-main",
 	{}
 )
 
-// console.log(document.querySelector('.main__tools').getBoundingClientRect().bottom)
+// Скролл при клике по кнопке "Scroll down"
+const scrollDownBtn = document.querySelector('.scroll-down.is-main')
 
+scrollDownBtn.addEventListener('click', () => {
+	const academySection = document.querySelector('.academy')
+
+	// window.scrollTo(0, academySection.getBoundingClientRect().top)
+	gsap.to(window, {
+		duration: 1,
+		ease: "none.none",
+		scrollTo: ".academy",
+	})
+})
 // Верхний отрицательный отступ у раздела academy, равный высоте этой секции
 academySectionSetMarginTop()
 function academySectionSetMarginTop() {
@@ -125,11 +137,14 @@ tlMain.to(".main__tools", {
 
 	scrollTrigger: {
 		pinSpacing: false,
-		onLeave: () => console.log('ok')
+		// onLeave: () => console.log('ok')
 	},
 	duration: 3,
-
+	// ease: "none.none",
+	// scrollTo: ".academy",
+	// autoKill: true,
 }, "<")
+
 // tlMain.to(".academy", {
 // 	// marginTop: ,
 
@@ -142,8 +157,24 @@ tlMain.to(".main__tools", {
 tlMain.to(".main-inner", {
 	opacity: 0,
 	pointerEvents: "none",
-
 }, "<2")
+tlMain
+	.from(".academy__title", {
+		y: OFFSET_Y,
+	})
+	.addLabel('academyImg')
+	.from(".academy__text", {
+		y: OFFSET_Y,
+		opacity: 0,
+	}, '>-0.5')
+	.from(".academy__btn", {
+		y: OFFSET_Y,
+		opacity: 0,
+	}, '>-0.5')
+	.from(".academy__img", {
+		opacity: 0,
+		duration: 1,
+	}, 'academyImg-=.6')
 // tlMain.to(".academy", {
 // 	marginTop: "-100vh",
 // 	duration: 3,
@@ -227,35 +258,60 @@ function menuHide() {
 		})
 }
 
-// Экран "Академия чиптюнинга"
-const tlAcademy = gsap.timeline({
-	defaults: {
-		duration: 0.6,
-	},
-	scrollTrigger: {
-		trigger: '.academy',
-		start: 'top 50',
-		toggleActions: "play pause resume reverse",
-	}
-})
+// // Экран "Академия чиптюнинга"
+// const tlAcademy = gsap.timeline({
+// 	defaults: {
+// 		duration: 0.6,
+// 	},
+// 	scrollTrigger: {
+// 		trigger: '.academy',
+// 		start: 'top 50',
+// 		toggleActions: "play pause resume reverse",
+// 		// scrub: 1,
+// 		// pin: true,
+// 		// onEnter: () => {
+// 		// 	console.log('onEnter')
+// 		// 	const academySection = document.querySelector('.academy')
+// 		// 	let step = 0
 
-tlAcademy
-	.from(".academy__title", {
-		y: OFFSET_Y,
-	})
-	.addLabel('academyImg')
-	.from(".academy__text", {
-		y: OFFSET_Y,
-		opacity: 0,
-	}, '>-0.5')
-	.from(".academy__btn", {
-		y: OFFSET_Y,
-		opacity: 0,
-	}, '>-0.5')
-	.from(".academy__img", {
-		opacity: 0,
-		duration: 1,
-	}, 'academyImg-=.6')
+// 		// 	const interval = setInterval(() => {
+
+// 		// 		gsap.to(window, {
+// 		// 			duration: 0,
+// 		// 			ease: "none.none",
+// 		// 			scrollTo: ".academy",
+// 		// 		})
+
+// 		// 		// window.scrollTo(0, academySection.getBoundingClientRect().top)
+
+
+// 		// 		if (step === 1000) {
+// 		// 			clearInterval(interval)
+// 		// 		}
+
+// 		// 		step += 10
+// 		// 	}, 10)
+// 		// }
+// 	}
+// })
+
+// tlAcademy
+// 	.from(".academy__title", {
+// 		y: OFFSET_Y,
+// 	})
+// 	.addLabel('academyImg')
+// 	.from(".academy__text", {
+// 		y: OFFSET_Y,
+// 		opacity: 0,
+// 	}, '>-0.5')
+// 	.from(".academy__btn", {
+// 		y: OFFSET_Y,
+// 		opacity: 0,
+// 	}, '>-0.5')
+// 	.from(".academy__img", {
+// 		opacity: 0,
+// 		duration: 1,
+// 	}, 'academyImg-=.6')
 
 
 // Раздел "Advant"
