@@ -33,7 +33,7 @@ const tlMain = gsap.timeline({
 		start: "top top",
 		pin: true,
 		scrub: 1,
-		markers: true,
+		// markers: true,
 		onLeave: () => {
 			const mainSectionParent = document.querySelector('.main-inner').closest('.pin-spacer')
 			mainSectionParent.style.pointerEvents = 'none'
@@ -161,7 +161,7 @@ tlMain.to(".main-inner", {
 tlMain
 	.from(".academy__title", {
 		y: OFFSET_Y,
-	})
+	}, "<")
 	.addLabel('academyImg')
 	.from(".academy__text", {
 		y: OFFSET_Y,
